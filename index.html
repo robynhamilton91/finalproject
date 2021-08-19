@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>MADJ Final Project</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <link type="text/css" rel="stylesheet" href="js/uikit-2.27.5/css/uikit.almost-flat.min.css" />
+  <link type="text/css" rel="stylesheet" href="js/uikit-2.27.5/css/components/sticky.almost-flat.min.css" />
+  <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="js/uikit-2.27.5/js/uikit.min.js"></script>
+  <script type="text/javascript" src="js/uikit-2.27.5/js/components/sticky.min.js"></script>
+  <script type="text/javascript" src="js/uikit-2.27.5/js/components/lightbox.min.js"></script>
+  <script type="text/javascript" src="js/uikit-2.27.5/js/components/parallax.min.js"></script>
+  <style type="text/css">
+    @import url('https://fonts.googleapis.com/css?family=EB+Garamond|Roboto');
+
+    html {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1em;
+      line-height: 1.5em;
+    }
+
+    H1,H2 {
+      font-family: 'Open Sans Bold', sans-serif;
+      font-weight: bold;
+      color: white;
+      font-size: 2em;
+      margin-top: 20px;
+      text-shadow: 2px 2px #5a3caf;
+      
+    }
+
+    H3 {
+      font-family: 'Open Sans', sans-serif;
+      color: #9930a6;
+      font-size: 1.5em;
+      font-weight: bold;
+      padding-bottom: 10px;
+    }
+
+    H4 {
+      font-family: 'Open Sans', sans-serif;
+      color: #ff832c;
+      font-size: 1.1em;
+      padding-bottom: 10px;
+      font-weight:550
+    }
+    strong {
+      color: #ea257e;
+
+    }
+
+    .uk-navbar-nav>li:not(.uk-active)>a:hover {
+      background-color: rgb(230, 230, 230);
+      font-family: 'Open Sans Bold', sans-serif;
+      color: #5a3caf;
+    }
+
+    .uk-navbar-nav>li:not(.uk-active)> {
+      background-color: rgb(230, 230, 230);
+      font-family: 'Open Sans Bold', sans-serif;
+      color: #5a3caf;
+    }
+
+    .uk-navbar {
+      z-index: 100;
+      font-family: 'Open Sans Bold', sans-serif;
+      color: #5a3caf;
+
+    }
+
+    .plain {
+      color: #5a3caf;
+      text-shadow: none;
+    }
+
+    .uk-link>li:not(.uk-active)> {
+      background-color: rgb(230, 230, 230);
+      font-family: 'Open Sans Bold', sans-serif;
+      color: #5a3caf;
+    }
+
+    a {
+      color: #ff3e64;
+    }
+
+    a:hover {
+      color: #ffa600;
+    }
+
+    .footer-text {
+      color: #999999;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 20px;
+    }
+
+    .center {
+      text-align: center;
+      justify-content: center;
+    }
+
+    .bgimage {
+      margin-bottom: 30px;
+      /* margin-top: 60px; */
+    }
+
+    .bgimagefix {
+      margin-bottom: -30px;
+      margin-top: 60px;
+    }
+
+    #bg_one {
+			background-image: url('img/corona_virus.jpeg');
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+      
+		}
+
+    .backgroundcolor {
+      background-color: white;
+    }
+
+    /* custom quote styles */
+
+    html {
+	 -webkit-font-smoothing: antialiased;
+	 -moz-osx-font-smoothing: grayscale;
+  }
+ .quote-body {
+	 background-color: #e7e7e2;
+}
+ .column {
+	 padding: 20px 20px;
+	 max-width: 600px;
+	 margin: 0 auto;
+}
+ .qp {
+	 font-family: 'Open Sans', sans-serif;
+	 font-size: 17px;
+	 line-height: 1.6;
+}
+ .cqright {
+	 font-family: 'Open Sans', sans-serif;
+	 font-weight: 400;
+	 letter-spacing: 1.5px;
+	 font-style: normal;
+	 font-size: 30px;
+	 line-height: 1.25em;
+	 text-transform: uppercase;
+	 color: #5a3caf;
+	 float: right;
+	 max-width: 350px;
+	 margin: 10px -4% 10px 20px;
+	 background: -webkit-linear-gradient(top, #9930a6 0px, #ff832c 100%);
+	 background: linear-gradient(top, #9930a6 0px, #ff832c 100%);
+	 -webkit-background-clip: text;
+	 -webkit-text-fill-color: transparent;
+}
+.cqleft {
+	 font-family: 'Open Sans', sans-serif;
+	 font-weight: 400;
+	 letter-spacing: 1.5px;
+	 font-style: normal;
+	 font-size: 30px;
+	 line-height: 1.25em;
+	 text-transform: uppercase;
+	 color: #5a3caf;
+	 float: left;
+	 max-width: 310px;
+	 margin: 10px 1% 30px 20px;
+	 background: -webkit-linear-gradient(top, #9930a6 0px, #ff832c 100%);
+	 background: linear-gradient(top, #9930a6 0px, #ff832c 100%);
+	 -webkit-background-clip: text;
+	 -webkit-text-fill-color: transparent;
+}
+ .cq:before {
+	 content: '';
+}
+ .cq:after {
+	 content: '';
+}
+ 
+
+
+
+    /* end of custom quote styles */
+
+  </style>
+</head>
+
+<body>
+
+  <div class="uk-cover uk-height-viewport uk-hidden-small">
+    <img src="img/ladywatchingtv.jpg" width="100%" alt="Woman watching TV">
+		<figcaption class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center">
+			<div>
+        <h1 class="uk-heading-large">Whatcha watchin'?</h1>
+        <h2>A look at the changing TV industry in the UK & Ireland</h2>
+        <a href="#intro" data-uk-smooth-scroll><i class="uk-icon-chevron-down uk-icon-large"></i></a>
+      </div>
+    </figcaption>
+  </div>
+
+  <div class="uk-cover uk-height-viewport uk-hidden-large">
+    <img src="img/ladywatchingtvsmall.jpg" width="100%" alt="Woman watching TV">
+		<figcaption class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center">
+			<div>
+        <h1 class="uk-heading-large">Whatcha watchin'?</h1>
+        <h2>A look at the changing TV industry in the UK & Ireland</h2>
+        <a href="#intro" data-uk-smooth-scroll><i class="uk-icon-chevron-down uk-icon-large"></i></a>
+      </div>
+    </figcaption>
+  </div>
+
+
+  <nav class="uk-navbar" data-uk-sticky="{clsactive: 'uk-navbar-attached', top: -100, animation: 'uk-animation-slide-top'}">
+    <a href="" class="uk-navbar-brand uk-hidden-small">Whatcha watchin'?</a>
+    <ul class="uk-navbar-nav uk-hidden-small" data-uk-scrollspy-nav="{closest: 'li', smoothscroll: {offset: 50}}">
+      <li><a href="#intro">Introduction</a></li>
+      <li><a href="#history">How did we get here?</a></li>
+      <li><a href="#covid">The Covid Corner</a></li>
+      <li><a href="#survey">How we're watching TV right now</a></li>
+      <li><a href="#interviews">The industry view</a></li>
+      <li><a href="#future">The future of TV watching</a></li>
+      
+    </ul>
+    <a href="#offcanvas" class="uk-navbar-toggle uk-hidden-large uk-hidden-medium" data-uk-offcanvas></a>
+    <a href="" class="uk-navbar-brand uk-navbar-center uk-hidden-large uk-hidden-medium">Whatcha watchin'?</a>
+  </nav>
+
+  <div class="uk-container uk-width-medium-2-3 uk-container-center uk-margin-top">
+
+		<h2 id="intro" class="plain">Introduction</h2>
+    <p>"Streaming services<a href="https://www.vox.com/culture/2017/8/17/16151916/future-of-netflix"> will price everybody else out of the TV-making market</a>", "Video-on-demand services in the UK are <a href="https://www.ofcom.org.uk/__data/assets/pdf_file/0026/149075/ampere-analysis-current-status-future-development.pdf"> fundamentally changing how consumers watch content</a>," "U.S. media companies expect traditional pay-TV bundle subscribers to fall from <a href="https://www.cnbc.com/2020/10/24/big-media-companies-reorganize-for-world-of-50-million-tv-subscribers.html">75 million to 50 in the next five years</a>." Long established broadcast TV makers have faced these kinds of startling headlines regarding their future place in the entertainment ecosystem for the better part of the last decade. But is there any credence to these dramatic predictions?  </p>
+    <p>It’s undeniable that the average TV watcher’s viewing habits have changed considerably in recent years, largely owing to the increasingly widespread availability of on-demand streaming services which transfer control of what, when and where is watched into the viewer’s hands. The TV and video industry has been in a state of flux for some time and the extent to which it will continue to change has proven difficult to forecast.</p>
+    <p>When streaming services first burst onto the scene, they primarily functioned as platforms to access movies and TV shows previously aired elsewhere. This all changed when Netflix made its initial foray into producing its own original content with <i>House of Cards</i> back in 2013. The move completely changed the old model for television and placed streamers in direct competition with the traditional TV and video industry. In moves taken to wrest back control, we're now seeing large content producers like Disney recovering their content from streamers and starting their own on-demand platforms. TV channels and media organisations are likewise finding new and innovative ways to host their content online for on-demand viewing.</p>
+    <p>According to <a href="https://www.ofcom.org.uk/__data/assets/pdf_file/0031/196375/adults-media-use-and-attitudes-2020-report.pdf">Ofcom</a>, 64% of all adults in the UK now use at least one video-on-demand service (free or paid-subscription based), a figure up from 60% in 2018 and 55% in 2017, and the trend is only set to continue. The coronavirus pandemic has done much to accelerate this continuing shift towards on-demand streaming platforms. When the world moved inside, access to streaming services morphed from an entertainment outlet into a lifeline, so much so that for example, early during the first period of global lockdown, <a href="https://www.theguardian.com/media/2020/mar/19/netflix-to-slow-europe-transmissions-to-avoid-broadband-overload">Netflix was forced to throttle its speeds across Europe</a> to free up bandwidth for home workers.  </p>
+    <p>But first...</p>
+  </div>
+
+<div data-uk-parallax="{bg:-50}" class="uk-flex uk-flex-center uk-flex-middle bgimage" alt="history of television" id="history" style="background-image: url('img/History_BackgroundStretch.png');height:200px;background-position:center;">
+			<h2 class="uk-heading-large" data-uk-parallax="{opacity:0.3,y:60}">How did we get here?</h2>
+</div>
+   
+ 
+  <div class="uk-container uk-width-medium-2-3 uk-container-center uk-margin-top">
+    <p>The dawn of the age of television came not even a hundred years ago, with the first public demonstration of television in the UK in 1926. The timeline in Figure 1.1 below, illustrates a brief history of the development of television in the UK & Ireland since that time, highlighting some key moments of technological breakthrough, important broadcasts, and historic milestones for the industry.</p>
+         <div data-uk-scrollspy="{cls:'uk-animation-slide-right'}">
+          <div class="flourish-embed flourish-cards" data-src="visualisation/6899105"><script src="https://public.flourish.studio/resources/embed.js"></script></div></script></div>
+    <p>...and with that final timeline card bringing us up to the beginning of a post-Covid world, let’s pause to take stock of the pandemic’s inevitable impact on the TV industry and take a glance at some of the dramatic changes it has seen in the eventful and challenging period since March 2020.</p>
+  </div>
+
+  
+      <div data-uk-parallax="{bg:-50}" class="uk-flex uk-flex-center uk-flex-middle bgimagefix uk-hidden-small" id="covid" alt="covid and the TV industry" style="background-image: url('img/How_BackgroundStretch.jpg');height:200px;background-position:center;">
+          <h2 class="uk-heading-large" data-uk-parallax="{opacity:0.3,y:60}">The Covid corner</h2>
+      </div>
+
+      <div data-uk-parallax="{bg:-50}" class="uk-flex uk-flex-center uk-flex-middle bgimagefix uk-hidden-large" id="covid" alt="covid and the TV industry" style="background-image: url('img/Mobile_Covid_Stretch.jpg');height:200px;background-position:center;">
+        <h2 class="uk-heading-large" data-uk-parallax="{opacity:0.3,y:60}">The Covid corner</h2>
+    </div>
+
+<div class="uk-cover-background" id="bg_one">
+
+    <div class="uk-container uk-width-medium-2-3 uk-container-center uk-margin-top backgroundcolor">
+    
+      <div class="uk-container uk-hidden-small uk-width-medium-3-3 uk-container-center uk-margin-top backgroundcolor">
+        <p>The coronavirus pandemic’s impact has been massive and far-reaching across all aspects of society and should not be underestimated. However, in the interests of brevity, here we consider how restrictive measures designed to fight the spread of the virus have had some top-line effects on both the production and consumption of television in the UK. These boil down to two major types of effects, those that resulted from extended periods of national lockdown that will likely not last (but may take the industry some time to recover from), and effects that saw the growth and acceleration of pre-existing trends in the market that are more likely to stand the test of time. </p>
+      </div>
+
+      <div class="uk-container uk-container-center uk-margin-top uk-width-medium-3-3 backgroundcolor">
+        <div class="uk-grid">
+          <div class="uk-width-1-3">
+                <h3 class= "uk-hidden-small">The short-term implications:</h3>
+                <h4 class="uk-hidden-small">Broadcast TV got a temporary audience boost</h4>
+                <p class= "uk-hidden-small">The early days of Covid-19’s stranglehold on the global economy helped to temporarily boost broadcaster TV viewing and reinforced the importance of public service broadcasters (PSBs) as trusted providers of news and information. In April 2020 when the nation went into its first period of full national lockdown, the average amount of time people spent viewing audio-visual content increased to an estimated <a href="https://www.ofcom.org.uk/__data/assets/pdf_file/0010/200503/media-nations-2020-uk-report.pdf">6 hours 25 minutes per person per day</a>(Figure 2.1), 90 minutes more than the average figure for 2019. More than half of this viewing (an average of 3 hours 46 minutes per day) was on broadcaster television – up by 32 minutes on 2019, with most of the increase spent watching news programmes. </p>
+                <p class= "uk-hidden-small">The increased appetite for news saw PSBs achieve their highest combined monthly viewing share in more than six years in March 2020, when they attracted 58.8% of broadcast TV viewing. However, this boost was fleeting and just three months later, PSBs’ combined viewing share had fallen back to 54.6%, its lowest level since August 2019. By the end of the 2020, though overall broadcasters had seen an increase in viewership, the average minutes viewed per person per day evened out from the spikes that were seen early during the pandemic’s development.</p>
+                <h4 class="uk-hidden-small">Widespread cancellation of key broadcast events led to large advertising revenue loss </h4>
+                <p class="uk-hidden-small">Pauses in TV production due to anti-Covid restrictive measures meant that broadcasters were forced to reduce the number of mainstay soaps they aired each week and key sports fixtures which usually draw in huge audiences also had to be cancelled or postponed. The Six Nations, the FA Cup, the Tour de France, Wimbledon, Euro 2020 and the Olympic and Paralympic Games were just a few of the major sporting casualties of 2020.</p>
+                <p class="uk-hidden-small">Additionally, despite PSBs enjoying increased audience share, coronavirus restrictions led to a substantial loss of advertising revenue from several industries, including travel, leisure, hospitality, and retail. The losses represent an amplification of a pre-existing trend in the TV advertising market. Before the pandemic, TV’s share of display advertising was already falling. According to data from WARC, TV spot display advertising fell from 32% to 29% during 2019 – continuing a decline from 41% in 2013.  </p>
+              </div>
+                  
+              <div class="uk-width-2-3 uk-hidden-small">
+                <div class="uk-card uk-card-default uk-card-body uk-sticky" style="position: sticky; top: 30px;" uk-sticky="bottom: #offset">
+                  <div data-uk-scrollspy="{cls:'uk-animation-slide-right'}">
+                    <div class="flourish-embed flourish-chart" data-src="visualisation/6917891"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+
+          <div class="uk-container uk-container-center uk-margin-top uk-width-medium-3-3 backgroundcolor">
+            <div class="uk-grid">      
+              <div class="uk-width-2-3 uk-hidden-small">
+                <div class="uk-card uk-card-default uk-card-body uk-sticky" style="position: sticky; top: 30px;" uk-sticky="bottom: #offset">
+                  <div data-uk-scrollspy="{cls:'uk-animation-slide-left'}">
+                    <div class="flourish-embed" data-src="story/949330"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+                  </div>
+                </div>
+              </div>
+            
+
+              <div class="uk-width-1-3">
+                <h3 class= "uk-hidden-small">The long-term implications:</h3>
+                <h4 class="uk-hidden-small">The trend of migration towards SVoDs ramped up and is set to continue</h4>
+                <p class= "uk-hidden-small">Before the pandemic, more than half of UK households already subscribed to video-on-demand services and lockdown served to accelerate take-up rate across all age demographics (Figure 2.2). Ofcom estimates that 12 million online adults aged 16+, started accessing a new SVoD subscription during lockdown with 3 million of these doing so for the first time. A further estimated 7 million adult SVoD users gained access to an additional SVoD subscription, while around 2 million former SVoD users regained access to a SVoD service during lockdown.   </p>
+                <p class= "uk-hidden-small">Disney+’s March 2020 launch fortuitously coincided with the beginning of the population’s forced at-home confinement and it certainly reaped the rewards, quickly surpassing NOW TV to become the UK’s third most-subscribed-to SVoD service after Amazon Prime Video and Netflix.</p>
+                <p class="uk-hidden-small">There are also indications that this surge in uptake of SVoD services will stick: consider the increase in share of viewing of SVoD’s during 2020 (+31 minutes per person per day) compared to broadcast VoD services limited increase of just +1 minute per day (Figure 2.3). The stark contrast highlights the challenges PSBs face to compete against other online video services. The rapid growth potential of SVoDs have been underestimated for years. For example, this <a href="https://www.bbc.co.uk/news/business-34050865?utm_source=pocket_mylist">BBC article from 2015</a> predicted that by 2020 global SVoDs subscribers for the (then) three most popular streaming platforms (Netflix, Amazon Prime and Hulu) would hover around the 114m mark. In actuality, that figure is closer to 357m (Figure 2.4).</p>
+                <p class="uk-hidden-small">Ampere Analysis research conducted in the first three months of 2021 showed that 48% of online adults considered online video services to be their main way of watching TV and film (up by 2pp since the same period in 2020). Furthermore, 55% of UK adults said that they expect to spend the same amount of time watching streamed programmes or series after the crisis as they did during it. It stands to reason that SVoD subscriptions will likely hold as organic growth and habitual use offset cancellation of subscriptions. And more a third (35%) of adults can see themselves no longer watching the main TV channels (BBC, ITV, Channel 4 and Channel 5) within the next three years, with this proportion rising to more than half (51%) among 16-34-year-olds. </p>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div> 
+
+      
+
+      <div class="uk-container uk-width-medium-2-3 uk-container-center uk-margin-top">
+              <p class= "uk-hidden-large">The coronavirus pandemic’s impact has been massive and far-reaching across all aspects of society and should not be underestimated. However, in the interests of brevity, here we consider how restrictive measures designed to fight the spread of the virus have had some top-line effects on both the production and consumption of television in the UK. These boil down to two major types of effects, those that resulted from extended periods of national lockdown that will likely not last (but may take the industry some time to recover from), and effects that saw the growth and acceleration of pre-existing trends in the market that are more likely to stand the test of time. </p>
+              <h3 class= "uk-hidden-large">The short-term implications:</h3>
+              <h4 class="uk-hidden-large">Broadcast TV got a temporary audience boost</h4>
+              <p class= "uk-hidden-large">The early days of Covid-19’s stranglehold on the global economy helped to temporarily boost broadcaster TV viewing and reinforced the importance of public service broadcasters (PSBs) as trusted providers of news and information. In April 2020 when the nation went into its first period of full national lockdown, the average amount of time people spent viewing audio-visual content increased to an estimated <a href="https://www.ofcom.org.uk/__data/assets/pdf_file/0010/200503/media-nations-2020-uk-report.pdf">6 hours 25 minutes per person per day</a>(Figure 2.1), 90 minutes more than the average figure for 2019. More than half of this viewing (an average of 3 hours 46 minutes per day) was on broadcaster television – up by 32 minutes on 2019, with most of the increase spent watching news programmes.</p>
+                <div class="uk-hidden-large">
+                  <div class="uk-card uk-card-default uk-card-body uk-sticky" style="position: sticky; top: 30px;" uk-sticky="bottom: #offset">
+                    <div class="flourish-embed flourish-chart" data-src="visualisation/6917891"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+                  </div>    
+                </div>
+              <p class= "uk-hidden-large">The increased appetite for news saw PSBs achieve their highest combined monthly viewing share in more than six years in March 2020, when they attracted 58.8% of broadcast TV viewing. However, this boost was fleeting and just three months later, PSBs’ combined viewing share had fallen back to 54.6%, its lowest level since August 2019. By the end of the 2020, though overall broadcasters had seen an increase in viewership, the average minutes viewed per person per day evened out from the spikes that were seen early during the pandemic’s development </p>
+              <h4 class="uk-hidden-large">Widespread cancellation of key broadcast events led to large advertising revenue loss </h4>
+              <p class="uk-hidden-large">Pauses in TV production due to anti-Covid restrictive measures meant that broadcasters were forced to reduce the number of mainstay soaps they aired each week and key sports fixtures which usually draw in huge audiences also had to be cancelled or postponed. The Six Nations, the FA Cup, the Tour de France, Wimbledon, Euro 2020 and the Olympic and Paralympic Games were just a few of the major sporting casualties of 2020.b</p>
+              <p class="uk-hidden-large">Additionally, despite PSBs enjoying increased audience share, coronavirus restrictions led to a substantial loss of advertising revenue from several industries, including travel, leisure, hospitality, and retail. The losses represent an amplification of a pre-existing trend in the TV advertising market. Before the pandemic, TV’s share of display advertising was already falling. According to data from WARC, TV spot display advertising fell from 32% to 29% during 2019 – continuing a decline from 41% in 2013.  </p>
+              <h3 class= "uk-hidden-large">The long-term implications:</h3>
+              <h4 class="uk-hidden-large">The trend of migration towards SVoDs ramped up and is set to continue</h4>
+              <p class= "uk-hidden-large">Before the pandemic, more than half of UK households already subscribed to video-on-demand services and lockdown served to accelerate take-up rate across all age demographics (Figure 2.2). Ofcom estimates that 12 million online adults aged 16+, started accessing a new SVoD subscription during lockdown with 3 million of these doing so for the first time. A further estimated 7 million adult SVoD users gained access to an additional SVoD subscription, while around 2 million former SVoD users regained access to a SVoD service during lockdown.   </p>
+              <p class= "uk-hidden-large">Disney+’s March 2020 launch fortuitously coincided with the beginning of the population’s forced at-home confinement and it certainly reaped the rewards, quickly surpassing NOW TV to become the UK’s third most-subscribed-to SVoD service after Amazon Prime Video and Netflix.</p>
+                <div class="uk-hidden-large">
+                  <div class="uk-card uk-card-default uk-card-body uk-sticky" style="position: sticky; top: 30px;" uk-sticky="bottom: #offset">
+                    <div class="flourish-embed" data-src="story/949330"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+                  </div>    
+                </div>
+              <p class="uk-hidden-large">There are also indications that this surge in uptake of SVoD services will stick: consider the increase in share of viewing of SVoD’s during 2020 (+31 minutes per person per day) compared to broadcast VoD services limited increase of just +1 minute per day (Figure 2.3). The stark contrast highlights the challenges PSBs face to compete against other online video services. The rapid growth potential of SVoDs have been underestimated for years. For example, this <a href="https://www.bbc.co.uk/news/business-34050865?utm_source=pocket_mylist">BBC article from 2015</a> predicted that by 2020 global SVoDs subscribers for the (then) three most popular streaming platforms (Netflix, Amazon Prime and Hulu) would hover around the 114m mark. In actuality, that figure is closer to 357m (Figure 2.4).</p>
+              <p class="uk-hidden-large">Ampere Analysis research conducted in the first three months of 2021 showed that 48% of online adults considered online video services to be their main way of watching TV and film (up by 2pp since the same period in 2020). Furthermore, 55% of UK adults said that they expect to spend the same amount of time watching streamed programmes or series after the crisis as they did during it. It stands to reason that SVoD subscriptions will likely hold as organic growth and habitual use offset cancellation of subscriptions. And more a third (35%) of adults can see themselves no longer watching the main TV channels (BBC, ITV, Channel 4 and Channel 5) within the next three years, with this proportion rising to more than half (51%) among 16-34-year-olds. </p>
+
+      </div>
+            
+        
+      
+
+  <div data-uk-parallax="{bg:-50}" class="uk-flex uk-flex-center uk-flex-middle bgimage" id="survey" alt="how we watch TV" style="background-image: url('img/What_BackgroundStretch.jpg');height:200px;background-position:center;">
+    <h2 class="uk-heading-large" data-uk-parallax="{opacity:0.3,y:100}">How we're watching TV right now</h2>
+</div>
+
+<div class="uk-container uk-width-medium-2-3 uk-container-center uk-margin-top">
+  <p class= "uk-hidden-small">Having addressed the big Covid-tainted elephant in the room that shook up the TV world in 2020, let’s now dive into the what, when, where, why and how of TV watching today, in 2021. The following section discusses the results of some original research carried out by the author exploring current TV watching habits. It was conducted via an online survey which ran between May 18-24, 2021. The <a href="http://doc.gold.ac.uk/~rhami002/CW3_Robyn_Hamilton/CW3_Project_files/CW3_project.html">sample consisted of 711 participants</a> living in the UK or Ireland of all genders, aged 16 and above.  </p>
+  <p class= "uk-hidden-small">Let’s open up the exploration of the results of the survey by taking a look at the different devices we use today to watch TV. </p>
+</div>
+
+  <div class="uk-container uk-container-center uk-margin-top uk-width-medium-2-3">
+    <div class="uk-grid">
+      <div class="uk-width-1-3">
+            <h3 class="uk-hidden-small">How we're watching TV</h3>
+            <p class= "uk-hidden-small">Figure 3.1 shows the breakdown by age of all of the devices that each cohort regularly uses. It shows preference for quite a diverse spread across devices, indicating that today’s average TV watcher wants variety when it comes how they typically watch TV. Devices that offer more mobility like smartphones, laptops and tablets are particularly popular with younger age brackets. </p>
+            <p class= "uk-hidden-small">Figure 3.2 shows the go-to device to watch television across the entire sample. This chart shows that the at-home stationary TV set still reigns supreme as the favourite way to watch TV regardless of age group. From the list of options, altogether 73.1% of respondents chose a device that requires the use of a TV set to watch movies and TV shows as their favourite. Additionally, out of the nine available options, seven of them require an internet connection to access television, indicating that access to broadcast TV via traditional aerial or cable is not so important. </p>
+            <p class="uk-hidden-small">In figure 3.3, we get a more detailed breakdown of favourite TV watching devices among different age groups. Here we can see that smart TVs increase in popularity with age. This may be due to  older age groups being more likely to be able to afford smart TV sets which can be quite costly, as well as the tendency for older people to be in more settled living situations, where the mobility of their TV watching devices isn’t much of a concern. </p>
+          </div>
+      
+      <div class="uk-width-2-3 uk-hidden-small">
+        <div class="uk-card uk-card-default uk-card-body" style="position: sticky; top: 30px;" uk-sticky="{boundary:true,top:30}">
+          <div data-uk-scrollspy="{cls:'uk-animation-slide-right'}">
+            <div class="flourish-embed" data-src="story/953941"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="uk-container uk-width-medium-2-3 uk-container-center uk-margin-top">
+  <h3 class="uk-hidden-large">How we're watching TV</h3>
+  <p class= "uk-hidden-large">Figure 3.1 shows the breakdown by age of all of the devices that each cohort regularly uses. It shows preference for quite a diverse spread across devices, indicating that today’s average TV watcher wants variety when it comes how they typically watch TV. Devices that offer more mobility like smartphones, laptops and tablets are particularly popular with younger age brackets. </p>
+  <div data-uk-scrollspy="{cls:'uk-animation-slide-right'}">
+    <div class="flourish-embed uk-hidden-large" data-src="story/953941"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+  </div>
+  <p class= "uk-hidden-large">Figure 3.2 shows the go-to device to watch television across the entire sample. This chart shows that the at-home stationary TV set still reigns supreme as the favourite way to watch TV regardless of age group. From the list of options, altogether 73.1% of respondents chose a device that requires the use of a TV set to watch movies and TV shows as their favourite. Additionally, out of the nine available options, seven of them require an internet connection to access television, indicating that access to broadcast TV via traditional aerial or cable is not so important. </p>
+  <p class="uk-hidden-large">In figure 3.3, we get a more detailed breakdown of favourite TV watching devices among different age groups. Here we can see that smart TVs increase in popularity with age. This may be due to  older age groups being more likely to be able to afford smart TV sets which can be quite costly, as well as the tendency for older people to be in more settled living situations, where the mobility of their TV watching devices isn’t much of a concern. </p>
+</div>
+
+  <div class="uk-container uk-width-medium-2-3 uk-container-center uk-margin-top">
+    <h3>Where we’re watching TV </h3>
+    <p>Given many are watching TV through internet connected devices, let’s take a look at what on-demand streaming services are most being used. Figure 3.4 shows the top six most popular on-demand streaming services (both SVoD and BVoD) used amongst the sample. Perhaps unsurprisingly, Netflix rules the roost when it comes to subscribers. Though it’s not the longest established of the bunch (All 4 holds that title, having originally launched back in 2006 as 4oD) Netflix’s global presence, wealth of original content, massive back catalogue of familiar films and TV shows as well as its extensive marketing campaigns have really helped to propel the brand into popular consciousness since its UK and Ireland launch in 2012. </p>
+    <div data-uk-scrollspy="{cls:'uk-animation-slide-bottom'}">
+      <div class="flourish-embed flourish-photo-slider" data-src="visualisation/6961925"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+    </div>
+    <p>It is worth noting however, that Netflix’s stranglehold isn’t absolute. The meteoric rise of Disney+ since its launch last year (as discussed above) is reflected in the subscriber numbers here too. Almost half of respondents said that they subscribe to the paid streaming service. However, it’s also worth considering the massive and lengthy brand heritage that comes with the Disney name as a provider of televisual family entertainment has likely done much to drive new sign-ups. By comparison, Apple TV, another streaming competitor with a big name behind it, launched 5 months before Disney Plus but only 17% of respondents listed themselves as subscribers to the service. </p>
+  </div>
+
+  <div class="uk-container uk-container-center uk-margin-top uk-width-medium-2-3">
+    <div class="uk-grid">
+      <div class="uk-width-1-3">
+            <p class= "uk-hidden-small">Thinking about live traditional broadcast TV now, figure 3.5 gives a breakdown of the services the sample use to access live TV. Right away, the key stat that jumps out here is that close to a third of respondents have no access to any live TV services and a further quarter use Freeview, which as the name would suggest, is free to use. This suggests that the demand for live TV (at least enough demand to pay for it) is not as strong as it once was. However, the results to this question don’t consider that viewers can gain access to many live TV channels via various streaming services, thus circumventing the need for broadcast TV access via more traditional channels.  </p>
+            <p class= "uk-hidden-small">To dig a little further into this area of the data, figure 3.6 shows us what types of programming those who do have access to live broadcast TV tend to watch. As explored in the previous section, broadcast TV remains a crucial platform for time-sensitive programming like news and current affairs programmes, sports, large live national events in the public interest and so on.  </p>
+          </div>
+      
+      <div class="uk-width-2-3 uk-hidden-small">
+        <div class="uk-card uk-card-default uk-card-body" style="position: sticky; top: 30px;" uk-sticky="{boundary:true,top:30}">
+          <div data-uk-scrollspy="{cls:'uk-animation-slide-right'}">
+            <div class="flourish-embed" data-src="story/954049"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="uk-container uk-width-medium-2-3 uk-container-center uk-margin-top">
+    <p class= "uk-hidden-large">Thinking about live traditional broadcast TV now, figure 3.5 gives a breakdown of the services the sample use to access live TV. Right away, the key stat that jumps out here is that close to a third of respondents have no access to any live TV services and a further quarter use Freeview, which as the name would suggest, is free to use. This suggests that the demand for live TV (at least enough demand to pay for it) is not as strong as it once was. However, the results to this question don’t consider that viewers can gain access to many live TV channels via various streaming services, thus circumventing the need for broadcast TV access via more traditional channels.  </p>
+    <div data-uk-scrollspy="{cls:'uk-animation-slide-right'}">
+      <div class="flourish-embed uk-hidden-large" data-src="story/954049"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+    </div>
+    <p class="uk-hidden-large">To dig a little further into this area of the data, figure 3.6 shows us what types of programming those who do have access to live broadcast TV tend to watch. As explored in the previous section, broadcast TV remains a crucial platform for time-sensitive programming like news and current affairs programmes, sports, large live national events in the public interest and so on. </p>
+    <p class= "uk-hidden-large">Moving on to explore what kind of content people most enjoy watching, figure 3.7 shows us that TV programmes are the go-to preference over feature films for everyday viewing. This makes sense, given that watching a feature film usually represents a bigger one-sitting time commitment than watching a TV show. Hence, on the topic of TV shows over films specifically, figure 3.8 gives an overview of the most popular TV genres among different age brackets. For comparison, figure 3.9 shows data from <a href="https://www.barb.co.uk/resources/tv-facts/tv-since-1981/2020/top10/">BARB</a>, illustrating the wax and wane of TV genre popularity over the last four decades of television in the UK.  </p>
+     <div data-uk-scrollspy="{cls:'uk-animation-slide-left'}">
+        <div class="flourish-embed uk-hidden-large" data-src="story/954061"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+        </div>
+    <p class= "uk-hidden-large">It’s been <a href="https://variety.com/2019/tv/news/top-19-media-trends-of-2019-bidding-war-for-classic-tv-hits-1203454261/">well-publicised</a> that competing streaming platforms regularly engage in bidding wars and pay hundreds of millions each year to secure the streaming rights to popular shows that are no longer producing and airing new episodes on TV. This is because a back catalogue of content makes it easier for streaming platforms to attract new subscribers with the promise of beloved content known to them, while also offering new and exciting (but untested) original content. Figure 3.10 backs this assumption up, as we can see that nearly half of the sample respondents prefer to watch a mixture of familiar old shows and new content they’ve never watched before. And a further 1 in 10 say they turn to streaming platforms primarily to rewatch old favourites.</p>
+
+  </div>
+
+  <div class="uk-container uk-container-center uk-margin-top uk-width-medium-3-3 backgroundcolor">
+    <div class="uk-grid">      
+      <div class="uk-width-2-3 uk-hidden-small">
+        <div class="uk-card uk-card-default uk-card-body uk-sticky" style="position: sticky; top: 30px;" uk-sticky="bottom: #offset">
+          <div data-uk-scrollspy="{cls:'uk-animation-slide-left'}">
+            <div class="flourish-embed" data-src="story/954061"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+            </div>
+        </div>
+      </div>
+    
+
+      <div class="uk-width-1-3">
+        <p class= "uk-hidden-small">Moving on to explore what kind of content people most enjoy watching, figure 3.7 shows us that TV programmes are the go-to preference over feature films for everyday viewing. This makes sense, given that watching a feature film usually represents a bigger one-sitting time commitment than watching a TV show. Hence, on the topic of TV shows over films specifically, figure 3.8 gives an overview of the most popular TV genres among different age brackets. For comparison, figure 3.9 shows data from <a href="https://www.barb.co.uk/resources/tv-facts/tv-since-1981/2020/top10/">BARB</a>, illustrating the wax and wane of TV genre popularity over the last four decades of television in the UK.  </p>
+        <p class= "uk-hidden-small">It’s been <a href="https://variety.com/2019/tv/news/top-19-media-trends-of-2019-bidding-war-for-classic-tv-hits-1203454261/">well-publicised</a> that competing streaming platforms regularly engage in bidding wars and pay hundreds of millions each year to secure the streaming rights to popular shows that are no longer producing and airing new episodes on TV. This is because a back catalogue of content makes it easier for streaming platforms to attract new subscribers with the promise of beloved content known to them, while also offering new and exciting (but untested) original content. Figure 3.10 backs this assumption up, as we can see that nearly half of the sample respondents prefer to watch a mixture of familiar old shows and new content they’ve never watched before. And a further 1 in 10 say they turn to streaming platforms primarily to rewatch old favourites.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="uk-container uk-width-medium-2-3 uk-container-center uk-margin-top">
+    <p>So, we can confirm that there is indeed a strong appetite across TV watching audiences for old and familiar content, but what are the reasons behind this phenomenon? Why are TV viewers so attracted to old titles they’ve watched again and again? The question feels particularly pertinent, given that we’re living in what has been referred to as <a href="https://en.wikipedia.org/wiki/Golden_Age_of_Television_(2000s%E2%80%93present)">"The Golden Age of Television"</a>. When the barriers of access to an almost limitless variety of options are so low, why is watching the likes of Friends for the umpteenth time still more attractive to many of us? </p>
+    <p>To find out, the survey included an open-ended question asking participants to describe in their own words, the reasons why they return to the same TV shows again and again. Figure 3.10 shows a word cloud of the most frequently occurring words and phrases that came up in answer to this question, while figure 3.11 shows a word cloud of frequently occurring TV shows that participants mentioned that they like to rewatch. </p>
+    <div data-uk-scrollspy="{cls:'uk-animation-slide-bottom'}">
+    <div class="flourish-embed" data-src="story/954193"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+    </div>
+    <p class= "uk-hidden-small">With over 350 responses to this optional question, qualitatively analysing the results, they boil down the following essential reasons:</p>
+</div>
+
+  <div class="uk-container uk-container-center uk-margin-top uk-width-medium-2-3 uk-hidden-small">
+    <div class="uk-grid">
+      <div class="uk-width-1-2">
+        <blockquote data-uk-scrollspy="{cls:'uk-animation-slide-left'}">
+          <p>"The Office and Parks and Recreation remind me of a good time in my life, so I rewatched both fully this year during the pandemic."</p>
+        </blockquote>
+        <blockquote data-uk-scrollspy="{cls:'uk-animation-slide-left'}">
+          <p>"Star Trek Voyager - it’s cosy, and every episode has a hidden lesson behind it which is really thought provoking. It’s also very easy to watch when you’re not paying full attention."</p>
+        </blockquote>
+        <blockquote data-uk-scrollspy="{cls:'uk-animation-slide-left'}">
+          <p>"Schitt's Creek. It's a beautiful series that brings me great joy and is my comfort watch. I can practically quote every episode in its entirety by heart. But I liken it to listening to music. We don't listen to a song or album we love just once; we listen to them again and again to experience the emotions they evoke in us."</p>
+        </blockquote>
+        <blockquote data-uk-scrollspy="{cls:'uk-animation-slide-left'}">
+          <p>"The Office. I've recently moved to Ireland and rewatching The Office brings me comfort in a time where everything is uncertain and I know no one. It's a safe space sort of... familiar."</p>
+        </blockquote>
+        <blockquote data-uk-scrollspy="{cls:'uk-animation-slide-left'}">
+          <p>"Community. There are so many episodes but so many layered jokes that I get the best of both worlds— I get the comfort of a solid rewatch, but also the joy of copping on to a joke or reference that I hadn’t before."</p>
+        </blockquote>
+        <blockquote data-uk-scrollspy="{cls:'uk-animation-slide-left'}">
+          <p>"Forensic Files. It's fascinating. I also used to watch it with my children who I miss a lot now that they're grown and I live very far away from them."</p>
+        </blockquote>
+        <blockquote data-uk-scrollspy="{cls:'uk-animation-slide-left'}">
+          <p>"It's Always Sunny in Philadelphia. They are all such awful people it makes me feel better about myself. Most importantly though, it's hilarious."</p>
+        </blockquote>
+        <blockquote data-uk-scrollspy="{cls:'uk-animation-slide-left'}">
+          <p>"I'm rewatching Sex and the City at the moment. I think I'm watching it for comfort viewing. Don't need more post-apocalyptic drama than we already have IRL. Sometimes escapism to a hyper-glam version of a city where a narcissist gets paid a ridiculous 5 dollars per word as a writer is OK!"</p>
+        </blockquote>
+        <blockquote data-uk-scrollspy="{cls:'uk-animation-slide-left'}">
+          <p>"Fleabag and Peep Show - there is something relieving when you know what is going to happen!"</p>
+        </blockquote>
+        
+      </div>
+      
+      <div class="uk-width-1-2 uk-hidden-small">
+        <div class="uk-card uk-card-default uk-card-body" style="position: sticky; top: 30px;" uk-sticky="{boundary:true,top:30}">
+          <ul>
+            <li><strong>Predictability:</strong> Viewers like knowing what they can expect. If they liked a show the first time around, they can reasonably expect to enjoy it on multiple viewings. Already knowing what’s going to happen lessens any tensions that can build up, making for a more relaxing TV watching experience.</li>
+            <li><strong>Decision paralysis:</strong> related to predictability, many respondents cited an overabundance of choice as a reason to return to old favourites. Unable to decide on something new, viewers go for the ease of the ‘safe option,’ choosing something they’ve watched and enjoyed before. </li>
+            <li><strong>Nostalgia:</strong> many viewers cited nostalgia and “it’s a show I grew up with” as reasons to return to a particular TV show. Watching something associated with positive memories for a viewer is an easy form of escapism.</li>
+            <li><strong>Picking up missed details:</strong> Many viewers who cited longer TV drama series as types that they would return to, do so to pick up smaller details that they missed the first time around. Additionally, for this type of show, lots of viewers said they would rewatch a series they had enjoyed after a few years had gone by and they had forgotten most of the plot details, meaning they could watch it as if it were for the first time again.</li>
+            <li><strong>Joke appreciation:</strong> Many respondents cited comedy shows as the type that they most enjoy rewatching because they love to return to the well-written jokes that make them laugh.</li>
+            <li><strong>Comfort factor:</strong> related to almost all of the above factors, many viewers enjoy rewatching old shows because the familiarity they offer is a soothing and comforting way to unwind. Related to this, many rewatchers said they put on old favourites as background noise while they’re undertaking other tasks.</li>
+          </ul>   
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="uk-container uk-width-medium-2-3 uk-container-center uk-margin-top">
+    <p class= "uk-hidden-large">With over 350 responses to this optional question, qualitatively analysing the results, they boil down the following essential reasons:</p></p>
+    <ul class= "uk-hidden-large">
+      <li><strong>Predictability:</strong> Viewers like knowing what they can expect. If they liked a show the first time around, they can reasonably expect to enjoy it on multiple viewings. Already knowing what’s going to happen lessens any tensions that can build up, making for a more relaxing TV watching experience.</li>
+      <li><strong>Decision paralysis:</strong> related to predictability, many respondents cited an overabundance of choice as a reason to return to old favourites. Unable to decide on something new, viewers go for the ease of the ‘safe option,’ choosing something they’ve watched and enjoyed before. </li>
+      <li><strong>Nostalgia:</strong> many viewers cited nostalgia and “it’s a show I grew up with” as reasons to return to a particular TV show. Watching something associated with positive memories for a viewer is an easy form of escapism.</li>
+      <li><strong>Picking up missed details:</strong> Many viewers who cited longer TV drama series as types that they would return to, do so to pick up smaller details that they missed the first time around. Additionally, for this type of show, lots of viewers said they would rewatch a series they had enjoyed after a few years had gone by and they had forgotten most of the plot details, meaning they could watch it as if it were for the first time again.</li>
+      <li><strong>Joke appreciation:</strong> Many respondents cited comedy shows as the type that they most enjoy rewatching because they love to return to the well-written jokes that make them laugh.</li>
+      <li><strong>Comfort factor:</strong> related to almost all of the above factors, many viewers enjoy rewatching old shows because the familiarity they offer is a soothing and comforting way to unwind. Related to this, many rewatchers said they put on old favourites as background noise while they’re undertaking other tasks.</li> 
+    </ul> 
+    <p class= "uk-hidden-large">Here are the kind of answers people were giving to this question:</p>
+    <div class="uk-hidden-large">
+      <blockquote data-uk-scrollspy="{cls:'uk-animation-slide-left'}">
+        <p>"The Office and Parks and Recreation remind me of a good time in my life, so I rewatched both fully this year during the pandemic."</p>
+      </blockquote>
+      <blockquote data-uk-scrollspy="{cls:'uk-animation-slide-left'}">
+        <p>"Star Trek Voyager - it’s cosy, and every episode has a hidden lesson behind it which is really thought provoking. It’s also very easy to watch when you’re not paying full attention."</p>
+      </blockquote>
+      <blockquote data-uk-scrollspy="{cls:'uk-animation-slide-left'}">
+        <p>"Schitt's Creek. It's a beautiful series that brings me great joy and is my comfort watch. I can practically quote every episode in its entirety by heart. But I liken it to listening to music. We don't listen to a song or album we love just once; we listen to them again and again to experience the emotions they evoke in us."</p>
+      </blockquote>
+      <blockquote data-uk-scrollspy="{cls:'uk-animation-slide-left'}">
+        <p>"The Office. I've recently moved to Ireland and rewatching The Office brings me comfort in a time where everything is uncertain and I know no one. It's a safe space sort of... familiar."</p>
+      </blockquote> 
+  </div>
+  </div>
+
+  <div data-uk-parallax="{bg:-50}" class="uk-flex uk-flex-center uk-flex-middle bgimage" id="interviews" alt="the future of TV" style="background-image: url('img/Future_BackgroundStretch.jpg');height:200px;background-position:center;">
+    <h2 class="uk-heading-large" data-uk-parallax="{opacity:0.3,y:100}">TV: The industry view </h2>
+  </div>
+
+  <div class="uk-container uk-width-medium-2-3 uk-container-center uk-margin-top">
+    <p>Now that we’ve got a better idea of where we’re currently at, what lies in store for the future of the UK’s TV production and consumption landscape? To find out, I reached out to several industry professionals for their opinions. These included Anouska Marynicz, a TV Casting Producer working primarily in reality TV production, Simon Hamer, former Business Editor for Radio 4's Today Programme and Editor of Digital Coverage of Business and Technology News, and a source working for Netflix UK who wishes to remain anonymous.</p>
+    <p>I asked each contact the same series of questions on the topic of the future of TV and received some very different answers. What follows summarises some of the most interesting talking points to come out of our conversations.  </p>
+    <h3>Broadcast TV in Britain is staying put for the meantime </h3>
+    <p>From everything that has been explored so far, it seems clear that there’s a bright future for the streamers of the world, whereas the future of broadcast television’s place in the TV ecosystem is somewhat murkier.  </p>
+    <p>As a keen observer of technological developments, Mr Hamer’s views were the most pessimistic concerning live TV’s future. He can’t envision viewers continuing to watch pre-scheduled programming for too much longer now that they’ve acquired a taste for and are quite comfortable tailoring their own TV schedules to meet their needs.  As he puts it, “The audience that wants live TV is literally dying. There is just no evidence that younger viewers will wait and want other people to tell them what they want to watch.” </p>
+    <div data-uk-scrollspy="{cls:'uk-animation-slide-right'}">
+    <span class="cqright">"The audience that wants live TV is literally dying."</span>
+    </div>
+    <p>Ms Marynicz, currently working on the frontline of broadcast TV production is more optimistic, confident that there will always remain a place for live TV, even speculating as to whether it might be recovering some of its lost relevance. She gave popular PSB channel BBC 3 as an example, which moved to online-only some years ago and is now set to return to broadcast TV after its online successes with shows like <i>Fleabag</i>. She also emphasised the importance and popularity of “appointment TV” shows like <i>Love Island</i>, which generate a lot of time-sensitive water cooler chat for viewers, which just isn’t the case with on-demand content. “Yes, you can still watch <i>Love Island</i> like shows on catch-up at the weekend but then you can't join in the conversation during the week about it, and the market is still hungry for shows like these.”  </p>
+    <p>Ms Marynicz recognises the big streamers’ inexorable growth but she doesn’t see the broadcast TV industry in Britain going anywhere anytime soon. “There is still a hell of a lot of commissioning going on for all of the channels. There's still a lot of money and a lot of work for traditional programming at the moment.” </p>  
+    <div data-uk-scrollspy="{cls:'uk-animation-slide-left'}">
+    <span class="cqleft">"There is still a hell of a lot of money and commissioning going on for traditional TV channels."</span>
+    </div>
+    <p>The contact from Netflix, whom will be referred to as Mr Netflix from here on, like Ms Marynicz sees a future in which traditional broadcasters and on-demand content providers can co-exist. Netflix established a UK production base several years ago, which is now its third largest production base after the US and Canada. Mr Netflix notes that the company have been working hard to integrate themselves into the local ecosystem, implying that their strategy is to peacefully co-exist rather than take over. “The beauty of the UK is that it's such a competitive market that if you have an idea to pitch, there are a lot of different places that you can go with that idea and they will all be able to offer something slightly different. It's having that choice that makes the UK one of the most appealing destinations for film and TV production and we really want to keep it that way.” </p>
+    <h3>Algorithms are a useful tool but human intuition is still key to great TV production</h3>
+    <p>A term that used to be relegated to the world of mathematics; these days we hear the word ‘algorithm’ most often in relation to how big media companies employ complicated mathematical equations to dictate what kind of content we consume. From a consumer perspective, we understand the basic concept of what one chooses to watch dictates what kind of content one will be recommended to watch in the future. But what about from a production side? Will recommendation algorithms have a big part to play in the future of what kind of new TV shows get commissioned?</p>
+    <p>Mr Netflix argues that the sophistication of algorithms has been largely overstated. At Netflix their use remains very much a secondary gauging tool rather than a key decision driver. Commissioning decisions are human and creative first. “In the UK we have a large number of commissioners who have backgrounds in traditional British TV and the established UK creative ecosystem. Their job is to commission content that they find really excites them and fits the idea of what they think would make a great show for Netflix. If our algorithms were as sophisticated and as central to our business as some people suggest, then arguably we wouldn't need any of those commissioners in the first place. But it is their very uniquely brilliant, subjective intuition for what makes a great show that will give Netflix the edge in the long term, regarding its programming.”  </p>
+    <p>Mr Hamer sees algorithms as having created a new fragmented media space that goes against the ways in which traditional broadcasters usually try to capture the largest audience blocks possible. Algorithms encourage increasingly niche and numerous audience types which can survive and thrive happily in an on-demand context. However, on the flip side, as Mr Hamer puts it “the holy grail of programme making at the moment isn’t fragmentation, it's bringing people together where algorithms tend to exacerbate fragmentation.” </p>
+    <h3>TV watching will remain a passive activity </h3>
+    <p>On the topic of new technologies like virtual and augmented reality shaking up TV production to deliver a more interactive experience, none of the interviewees indicated that this was an immediate priority or something that they felt would play a big role in television’s future. Netflix has dabbled in this area, having launched several “choose your own ending” types of programmes. However, these seem to have amounted to little more than an initial period of early experimentation. Mr Netflix views these first tries as important stepping stones but doesn’t see interactivity becoming a major part of TV for some time to come “I don't think that the future of television is suddenly going to become interactive or that it's going to radically change in the short term but there are whole areas which are largely uncharted in terms of augmented reality and virtual reality.” </p>
+    <div data-uk-scrollspy="{cls:'uk-animation-slide-right'}">
+    <span class="cqright">"I hate to say it but it's sport and porn where the most innovation is"</span>
+    </div>
+    <p>Mr Hamer notes that despite rapidly evolving technology which offers various interactive functions, the process of TV watching remains largely the same. It is a passive activity where the viewer sits back and watches a screen. “I hate to say it, but generally it's sport and porn where the most innovation is! Sports coverage has changed in lots of ways and it's amazing but you're still a spectator, you're not involved. The immersive, the VR bit hasn't taken off.”  </p>
+    <p>As an entertainment outlet, both he and Ms Marynicz agree that audiences are not seeking an interactive experience when they sit down to watch television. Mostly, audiences want to consume and unwind “I think people don't want to choose what happens. They want to be told. They want someone else to decide what the story is and how it should best be told.” Speaking from a reality TV production perspective, Ms Marynicz also believes that the logistics around any kind of interactivity that would affect live programming would simply be too risky and complicated from a legal standpoint, as well as costly for most TV producers to consider.</p>
+    <h3>The content kings will emerge victorious</h3>
+    <p>If there’s one thing that all of the interviewees agree on, it’s that the media outlets that can provide the most in-demand content that will continue to enjoy success long into the future. Ms Marynicz and Mr Hamer both view the seemingly endless buying power of big streamers like Netflix and Amazon Prime to commission new programmes as a real threat to PSBs’ place in the TV production sphere. </p>
+    <div data-uk-scrollspy="{cls:'uk-animation-slide-left'}">
+      <span class="cqleft">"Streaming companies will become the beasts of the industry"</span>
+      </div> 
+    <p>Ms Marynicz contends that most TV makers won’t show loyalty to PSBs and will simply go where the money is, “If streaming companies have got the money to commission their own programmes, it makes them a lot more powerful than just having a back catalogue of licensed programmes. They will become the beasts of the industry.” Mr Hamer is a little bit more sceptical, believing that the streamers’ relentless greenlighting of costly hit-and-miss programmes will hit a limit of diminishing returns. “There's only so much good stuff that people can make and there's only so much that people can consume, so I suspect having a steady stream of really good content is going to be the challenge.” </p>
+    <p>The market leaders of the present streaming era, Netflix have long predicted the power and draw of original content; “The reason Netflix moved into Originals with <i>House of Cards</i>, was really in anticipation of a moment when there would be multiple different streaming services owned by different content providers. So that's why we ramped up our investment in original production and that continues to increase today.” A strong and diverse portfolio of original content along with the ability to offer “people the greatest degree of choice about how they consume what they want to consume” according to Mr Netflix, is the way for the company to provide “the best possible service to its customers”.  </p>
+</div>
+
+  <div data-uk-parallax="{bg:-50}" class="uk-flex uk-flex-center uk-flex-middle uk-hidden-small bgimage" id="future" alt="the future of TV" style="background-image: url('img/Crystal_Ball_Stretch.jpg');height:200px;background-position:center;">
+    <h2 class="uk-heading-large uk-hidden-small" data-uk-parallax="{opacity:0.3,y:100}">A glimpse into the future...</h2>
+  </div>
+
+  <div data-uk-parallax="{bg:-50}" class="uk-flex uk-flex-center uk-flex-middle uk-hidden-large" id="future" alt="the future of TV" style="background-image: url('img/Crystal_Ball_Stretch.jpg');height:200px;background-position:center;">
+    <h2 class="uk-heading-large uk-hidden-large" data-uk-parallax="{opacity:0.3,y:100}">A glimpse into the future...</h2>
+  </div>
+
+  <div class="uk-container uk-width-medium-2-3 uk-container-center uk-margin-top">
+    <p>Having considered industry observer opinions and current TV viewing habits data, this final section offers some brief predictions and recommendations for the future of the TV industry. </p>
+  </div>
+
+  <div class="uk-container uk-container-center uk-margin-top uk-width-medium-2-3 uk-hidden-small">
+    <div class="uk-grid">
+      <div class="uk-width-1-2">
+        <h4>Streamers will continue to grow, but it doesn’t mean PSBs have to die </h4>
+        <p>Looking ahead, the rise in ownership of internet connected devices alongside an increasing proliferation of platforms on which to watch TV and video content will continue to hit broadcast TV viewing numbers. Average live TV viewing minutes will fall back further, but broadcast channels will remain an important way for viewers to access time sensitive content like news and live sporting events. However, it is likely that younger viewers will drift away from live TV at a faster rate and if TV makers want to reach these audiences, they should look at ways to engage these cohorts through more digital spaces and social media if they are not doing so already. It is important for broadcasters that the emphasis is on quality content creation across platforms, rather than prioritising live viewing figures. </p>
+      </div>
+      
+      <div class="uk-width-1-2 uk-hidden-small">
+        <div class="uk-card uk-card-default uk-card-body" style="position: sticky; top: 30px;" uk-sticky="{boundary:true,top:30}">
+          <h4>Netflix’s days at the top are numbered</h4>
+          <p>The majority of TV watchers now pay for one or more streaming subscriptions and further growth looks likely as competition intensifies in the market. With an ever-growing catalogue of new and original content, Netflix will remain the market leader in the short term due to the brand being synonymous with streaming, however its lead will come under threat longer term from more competitors coming online. Netflix is at a disadvantage because its revenue is almost entirely reliant on subscriptions, while new rivals Apple TV and Disney Plus could potentially afford to undercut or forgo subscription fees in some cases. Competitor success will largely come down to content. This will be both the success of original programming and the ability to secure popular older content, which, as we’ve seen is significantly attractive to many viewers. </p>   
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="uk-container uk-width-medium-2-3 uk-container-center uk-hidden-large uk-margin-top">
+    <h4>Streamers will continue to grow, but it doesn’t mean PSBs have to die </h4>
+    <p>Looking ahead, the rise in ownership of internet connected devices alongside an increasing proliferation of platforms on which to watch TV and video content will continue to hit broadcast TV viewing numbers. Average live TV viewing minutes will fall back further, but broadcast channels will remain an important way for viewers to access time sensitive content like news and live sporting events. However, it is likely that younger viewers will drift away from live TV at a faster rate and if TV makers want to reach these audiences, they should look at ways to engage these cohorts through more digital spaces and social media if they are not doing so already. It is important for broadcasters that the emphasis is on quality content creation across platforms, rather than prioritising live viewing figures. </p>
+    <h4>Netflix’s days at the top are numbered</h4>
+    <p>The majority of TV watchers now pay for one or more streaming subscriptions and further growth looks likely as competition intensifies in the market. With an ever-growing catalogue of new and original content, Netflix will remain the market leader in the short term due to the brand being synonymous with streaming, however its lead will come under threat longer term from more competitors coming online. Netflix is at a disadvantage because its revenue is almost entirely reliant on subscriptions, while new rivals Apple TV and Disney Plus could potentially afford to undercut or forgo subscription fees in some cases. Competitor success will largely come down to content. This will be both the success of original programming and the ability to secure popular older content, which, as we’ve seen is significantly attractive to many viewers. </p>   
+  </div>
+  </div>
+
+  <div class="uk-container uk-width-medium-2-3 uk-container-center uk-margin-top">
+    <h4>Successful digital transformation is key for broadcasters</h4>
+    <p>For broadcasters to survive and thrive, they will need to be fully successful in their digital transformation goals, offering evolved digital platforms. They will need to establish direct customer relationships and continue to deliver on-demand content. Working with advertising firms to deliver targeted advertising will help to secure revenue that PSBs are losing from TV spot advertising.</p>
+    <p>Furthermore, long established UK-based broadcasters’ ability to provide highly relevant content for a national audience puts them in a superior market position which they should leverage to their advantage. They could potentially forge working relationships with streamers to co-exist in the same market, rather than being strong-armed out by bigger global players. Such a working model would help to promote a richer and more diverse media space, with a mixture of local and more globally appealing content.</p>         
+  </div>
+  
+  <div class="center">
+    <a href="#top" data-uk-smooth-scroll="">🔝 Back to the top 🔝</a>
+  </div>
+  
+  
+  <footer class="uk-text-center uk-margin-large">
+    <div class="footer-text">
+      ©2021 Robyn Hamilton | robynhamilton161@gmail.com | +44 7740 1978 28 | London, UK<br />
+      <a href="https://robynhamilton.myportfolio.com/work">Check out my other work</a>
+    </div>
+  </footer>
+
+
+  <div id="offcanvas" class="uk-offcanvas">
+    <div class="uk-offcanvas-bar">
+      <ul class="uk-nav uk-nav-offcanvas">
+        <li><a href="#intro">Introduction</a></li>
+        <li><a href="#history">How did we get here?</a></li>
+        <li><a href="#covid">The Covid corner</a></li>
+        <li><a href="#survey">How we're watching TV right now</a></li>
+        <li><a href="#interviews">The industry view </a></li>
+        <li><a href="#future">The future of TV watching</a></li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+
+</html>
+
